@@ -1,0 +1,108 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;  
+}
+
+.search-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem; /* Corrigido de "margin-bottomax-width" para "margin-bottom" */
+}
+
+.search-input {
+  padding: 0.75rem 1rem;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+.search-button {
+  padding: 0.75rem 1.25rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #020520;
+}
+
+.error-message {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.movie-card {
+  flex: 0 1 calc(25% - 1rem); /* Cada cartão ocupa 25% da largura menos 1rem de espaço */
+  max-width: 200px; /* Define um tamanho máximo para os cartões */
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.movie-title {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+  .movie-card {
+      flex: 0 1 calc(50% - 1rem); /* Ocupa 50% da largura em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card {
+      flex: 0 1 calc(100% - 1rem); /* Ocupa 100% da largura em telas pequenas */
+  }
+}
